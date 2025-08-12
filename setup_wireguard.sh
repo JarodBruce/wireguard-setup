@@ -99,7 +99,7 @@ EOL
 # --- 7. Service Enable and Start ---
 echo "--> Enabling and starting WireGuard service..."
 systemctl enable wg-quick@wg0
-systemctl start wg-quick@wg0
+systemctl restart wg-quick@wg0
 systemctl status wg-quick@wg0 --no-pager
 
 # --- 8. Display Results ---
