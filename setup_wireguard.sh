@@ -75,6 +75,7 @@ echo "--> Configuring firewall with ufw..."
 echo "--> Allowing packet forwarding for ufw..."
 # By default, ufw blocks all packet forwarding. This needs to be enabled for the VPN to work.
 sed -i 's/DEFAULT_FORWARD_POLICY="DROP"/DEFAULT_FORWARD_POLICY="ACCEPT"/' /etc/default/ufw
+ufw reload
 ufw allow 51820/udp
 ufw allow 22/tcp
 ufw --force enable
